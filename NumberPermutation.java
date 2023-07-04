@@ -30,26 +30,16 @@ public class NumberPermutation {
 // Меняем найденные цифры местами
         swap(digits, i, j);
 
-// Переворачиваем правую часть числа
-        reverse(digits, i + 1);
+
 
         int result = Integer.parseInt(new String(digits));
         return result;
     }
 
     private static void swap(char[] arr, int i, int j) {
-        char temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
+        char temp = arr[i]; МАССИВ с первым числом 2
+        arr[i] = arr[j]; числу 2 мы присваиваем число 3
+        arr[j] = temp; числу 3 присваиваем число 2
     }
 
-    private static void reverse(char[] arr, int start) {
-        int i = start;
-        int j = arr.length - 1;
-        while (i < j) {
-            swap(arr, i, j);
-            i++;
-            j--;
-        }
-    }
-}
+ 
